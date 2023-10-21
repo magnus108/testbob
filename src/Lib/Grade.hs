@@ -21,6 +21,8 @@ module Lib.Grade
     , writeGrades'
     , writeGrades
     ) where
+import GHC.Generics
+import Grelude
 
 import Control.Concurrent.MVar.Strict
 import Control.DeepSeq

@@ -84,6 +84,10 @@ module Lib.Translation
 
 import Control.Lens
 import Control.Concurrent
+import Grelude
+
+import Prelude hiding (read)
+import GHC.Generics
 
 data Translation = Translation { _loading :: String
                                , _isChanged :: String

@@ -5,6 +5,7 @@ module Lib
     , main
     ) where
 
+import Relude hiding (print)
 import Control.DeepSeq
 
 import qualified Lib.Server.Build as SBuild
@@ -453,7 +454,7 @@ receiveMessages env@Env{..} mgr watchMap hPhotographers hConfigDump hConfigDagsd
 
 
 
-type WatchMap = MVar (HashMap String StopListening)
+type WatchMap = MVar (HashMap.HashMap String StopListening)
 
 
 build :: Env -> WatchManager -> MVar FilePath -> WatchMap -> Handler Build.Model -> IO StopListening

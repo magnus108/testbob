@@ -10,7 +10,10 @@ module Lib.DagsdatoBackup
     , initialState
     ) where
 
+import Prelude hiding (read)
+import Grelude
 import Control.DeepSeq
+import GHC.Generics
 
 import System.Directory
 import Control.Concurrent.MVar.Strict

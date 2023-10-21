@@ -2,6 +2,7 @@ module Lib.Client.Dump
     ( dumpSection
     ) where
 
+import Relude
 import Lib.App (Action(..))
 import qualified Control.Concurrent.Chan.Strict as Chan
 

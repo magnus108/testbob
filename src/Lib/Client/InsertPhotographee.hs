@@ -5,6 +5,8 @@ module Lib.Client.InsertPhotographee
     , unModel
     , location
     ) where
+
+import Relude hiding (show)
 import Lib.App (Action(..))
 import qualified Control.Concurrent.Chan.Strict as Chan
 import qualified Lib.Dump as Dump

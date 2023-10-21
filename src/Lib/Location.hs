@@ -12,8 +12,12 @@ module Lib.Location
     , Model(..)
     ) where
 
+import Grelude
+import Prelude hiding (read)
 import Control.DeepSeq
 
+
+import GHC.Generics
 import Control.Concurrent.MVar.Strict
 import System.Directory
 

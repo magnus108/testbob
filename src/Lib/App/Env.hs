@@ -4,7 +4,8 @@ module Lib.App.Env
        , Action(..)
        ) where
 
-
+import Control.Concurrent.MVar
+import GHC.Generics
 import Control.DeepSeq
 import qualified Lib.Build as Build
 import qualified Control.Concurrent.Chan.Strict as Chan

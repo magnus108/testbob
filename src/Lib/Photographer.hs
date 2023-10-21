@@ -12,11 +12,14 @@ module Lib.Photographer
     , name
     , Model(..)
     ) where
+import GHC.Generics
 import Control.DeepSeq
 
+import Grelude
 import Control.Concurrent.MVar.Strict
 import Utils.ListZipper
 import Control.Lens
+import Prelude hiding (read)
 
 import Lib.Data
 

@@ -18,7 +18,10 @@ module Lib.Session
     , toInteger
     ) where
 
-import Prelude hiding (toInteger)
+import Grelude
+import GHC.Generics
+
+import Prelude hiding (toInteger, read)
 import qualified Control.Lens as Lens
 import Control.DeepSeq
 import qualified Utils.ListZipper as ListZipper

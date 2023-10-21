@@ -4,7 +4,7 @@ module Main where
 import qualified Lib
 import Text.Read
 import System.Environment (getArgs)
-import System.IO (BufferMode(LineBuffering), hSetBuffering)
+import System.IO (BufferMode(LineBuffering), hSetBuffering, stdout)
 
 
 main :: IO ()

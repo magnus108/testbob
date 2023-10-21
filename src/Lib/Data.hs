@@ -5,6 +5,8 @@ module Lib.Data
     ) where
 
 import Control.DeepSeq
+import GHC.Generics
+import Grelude
 
 data Data e s
     = NotAsked

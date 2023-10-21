@@ -6,7 +6,7 @@ module Lib.Client.Location
     , selectGrade
     )
 where
-
+import Relude hiding (show)
 import Lib.App (Action(..))
 import qualified Control.Concurrent.Chan.Strict as Chan
 

@@ -4,6 +4,9 @@ module Lib.Config
        , loadConfig
        ) where
 
+import Grelude
+import GHC.Generics
+
 data Config = Config
     { dumpFile :: !FilePath
     , doneshootingFile :: !FilePath

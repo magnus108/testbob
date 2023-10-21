@@ -33,15 +33,18 @@ module Lib.Photographee
     , getPhotographees
     , tryFindById
     ) where
+import GHC.Generics
 
 import Data.Char
+import Grelude
 
 import Control.Concurrent.MVar.Strict
 import Data.Csv
 import Control.DeepSeq
-import Data.List (nub)
+import Data.List (nub,sortOn)
 
-import Prelude hiding (empty)
+import Data.Functor
+import Prelude hiding (empty, read)
 
 import Lib.Data
 import Control.Lens

@@ -8,6 +8,7 @@ module Lib.Client.Tab
 
 import Graphics.UI.Threepenny.Core
 import qualified Graphics.UI.Threepenny as UI
+import Data.Maybe
 
 import Lib.Tab
 import qualified Lib.Tab as Tab

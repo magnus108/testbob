@@ -14,6 +14,8 @@ module Lib.Camera
     , Model(..)
     , initalState
     ) where
+import GHC.Generics
+import Grelude
 
 import Utils.ListZipper
 
@@ -21,6 +23,7 @@ import Control.Concurrent.MVar.Strict
 
 import Control.DeepSeq
 
+import Prelude hiding (read)
 import Lib.Data
 
 import Control.Lens

@@ -3,6 +3,7 @@ module Lib.Client.Shooting
     ) where
 
 import Lib.App (Action(..))
+import Relude
 import qualified Control.Concurrent.Chan.Strict as Chan
 
 import           Reactive.Threepenny

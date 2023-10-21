@@ -1,6 +1,8 @@
 module Lib.Client.Doneshooting
     ( doneshootingSection
     ) where
+
+import Relude
 import Lib.App (Action(..))
 import qualified Control.Concurrent.Chan.Strict as Chan
 

@@ -7,9 +7,12 @@ module Lib.Client.Utils
     , bEditing
     ) where
 
+import Text.Read
+import Data.List.NonEmpty
 import qualified Graphics.UI.Threepenny as UI
 import Graphics.UI.Threepenny.Core
 
+import Data.Functor
 
 item :: WriteAttr Element (UI Element)
 item = mkWriteAttr $ \item' container -> void $

@@ -14,7 +14,9 @@ module Lib.Doneshooting
     , writeDoneshooting
     , initialState
     ) where
-
+import Prelude hiding (read)
+import Grelude
+import GHC.Generics
 import System.FilePath
 import Control.Exception
 import Control.Concurrent.MVar.Strict

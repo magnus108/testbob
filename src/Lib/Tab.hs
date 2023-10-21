@@ -11,6 +11,9 @@ module Lib.Tab
 
 import Utils.ListZipper
 import Lib.Translation
+import GHC.Generics
+
+import Grelude
 
 data Tab
     = DumpTab

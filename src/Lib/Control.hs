@@ -10,6 +10,7 @@ import qualified Lib.Translation as Translation --todo should not be here
 
 import Data.Strings
 import qualified Relude.Unsafe as Unsafe
+import Data.Maybe
 
 import qualified Utils.ListZipper as ListZipper
 import Data.List.Extra hiding (elem)
@@ -80,7 +81,6 @@ controlXMP item' = do
     let pairPhotographeeAndCrFix = fmap (\x -> (fst x, filter (not . isGroup) (snd x))) $ filter (\x -> [] /= filter (not . isGroup) (snd x)) pairPhotographeeAndCr
 
     let fix = pairPhotographeeAndCrFix ++ fuck'
-    traceShowM fix
 
     let pairPhotographeeAndCrAndXmp = 
             (\i -> do

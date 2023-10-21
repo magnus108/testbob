@@ -20,6 +20,8 @@ module Lib.Main
     , build
     ) where
 
+import Prelude hiding (read)
+import GHC.Generics
 
 import Lib.Data
 import Control.DeepSeq

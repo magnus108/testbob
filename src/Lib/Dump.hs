@@ -16,6 +16,11 @@ module Lib.Dump
     , initalStateDir
     ) where
 
+import Grelude
+import GHC.Generics
+import Control.Monad.Extra
+
+import Prelude hiding (read)
 import Control.Concurrent.MVar.Strict
 import Control.DeepSeq
 import System.FilePath

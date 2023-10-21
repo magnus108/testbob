@@ -4,6 +4,7 @@ module Lib.Client.Control
 
 import Lib.App (Action(..))
 import qualified Control.Concurrent.Chan.Strict as Chan
+import Relude hiding (show)
 
 import Graphics.UI.Threepenny.Core
 import qualified Graphics.UI.Threepenny as UI

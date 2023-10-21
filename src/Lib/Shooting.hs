@@ -14,8 +14,10 @@ module Lib.Shooting
     , initialState
     ) where
 import Control.DeepSeq
+import GHC.Generics
 
-import Prelude hiding (toInteger)
+import Grelude
+import Prelude hiding (toInteger, read)
 
 import Control.Concurrent.MVar.Strict
 

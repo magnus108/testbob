@@ -8,8 +8,9 @@ module Lib.Build
     , toString
     , initalState
     ) where
-
-import Prelude hiding (toString)
+import GHC.Generics
+import Grelude
+import Prelude hiding (toString, read)
 import qualified Lib.Translation  as Translation --todo should not be here
 
 import Control.Concurrent.MVar.Strict

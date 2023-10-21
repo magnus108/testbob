@@ -2,12 +2,14 @@ module Lib.Client.Session
     ( sessionsSection
     ) where
 
+import Relude
 import Lib.App (Action(..))
 import qualified Control.Concurrent.Chan.Strict as Chan
 
 import           Reactive.Threepenny
 import Graphics.UI.Threepenny.Core
 import qualified Graphics.UI.Threepenny as UI
+import Data.Functor
 
 import Utils.Comonad
 

@@ -4,6 +4,7 @@ module Lib.Client.Main
     , selectPhotographeeF
     ) where
 import Control.DeepSeq
+import Relude hiding (show)
 
 import Lib.App (Action(..))
 import qualified Control.Concurrent.Chan.Strict as Chan

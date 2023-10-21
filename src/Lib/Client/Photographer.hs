@@ -3,6 +3,7 @@ module Lib.Client.Photographer
     , Data(..)
     ) where
 
+import Relude hiding (show)
 import Lib.App (Action(..))
 import qualified Control.Concurrent.Chan.Strict as Chan
 
