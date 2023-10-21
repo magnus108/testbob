@@ -1,0 +1,6 @@
+.stack-work/
+photoPolysemy.cabal
+*~
+.build/
+node_modules/
+._build/
