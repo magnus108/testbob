@@ -662,9 +662,10 @@ dirDump env mgr mDump mCamerasFile _ handler = do
             mgr
             (unDump path)
             (\e -> (takeExtension (eventPath e)) /= ".tmp" &&
-                case e of
+                case traceShowId e of
                 Added _ _ _ -> True
                 Removed _ _ _ -> True
+                Modified _ _ _ -> True
                 _ -> False
             )
             (\e -> do
