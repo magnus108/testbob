@@ -28,7 +28,7 @@ import qualified Lib.Photographee as Photographee
 data Build
     = DoneBuild Photographee.Photographee String
     | Building Photographee.Photographee String
-    | NoBuild
+    | NoBuild String
     | NoJpgBuild
     deriving (Eq, Show)
     deriving (Generic)
@@ -43,12 +43,12 @@ toString build translation = Lens.view translator translation ++ ". " ++ info
         translator = case build of
                 (DoneBuild _ _) -> Translation.doneBuild
                 (Building _ _) -> Translation.building
-                NoBuild -> Translation.noBuild
+                NoBuild _ -> Translation.noBuild
                 NoJpgBuild -> Translation.noJpgBuild
         info = case build of
                 (DoneBuild photographee x) -> Photographee.toName' photographee ++ " " ++ x
                 (Building photographee x) -> Photographee.toName' photographee ++ " " ++ x
-                NoBuild -> ""
+                NoBuild s -> s
                 NoJpgBuild ->"" 
 
 

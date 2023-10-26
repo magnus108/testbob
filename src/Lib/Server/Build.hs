@@ -100,8 +100,8 @@ myProgressProgram sample c photographee progress = do
             case f of
                 Nothing -> do
                     Chan.writeChan c (App.BuilderMessage (Build.Building photographee (show (div todo 8))))
-                Just _ ->
-                    Chan.writeChan c (App.BuilderMessage (Build.NoBuild))
+                Just e ->
+                    Chan.writeChan c (App.BuilderMessage (Build.NoBuild e))
             loop time mealyy
 
 
@@ -222,7 +222,7 @@ entry messages mBuildFile mDumpFile item = do
                 "user error (missingjpg)" ->  do
                     Chan.writeChan messages (App.BuilderMessage (Build.NoJpgBuild))
                 _ ->
-                    Chan.writeChan messages (App.BuilderMessage (Build.NoBuild))
+                    Chan.writeChan messages (App.BuilderMessage (Build.NoBuild $ show e))
         Right _ -> do
             Chan.writeChan messages (App.BuilderMessage (Build.DoneBuild photographee ("")))
             --HACK

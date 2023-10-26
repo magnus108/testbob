@@ -213,7 +213,7 @@ sinkModel env@Env{..} win translations bModel input
                                 (Build.DoneBuild _ _) -> do
                                     runFunction  $ ffi "$(%1).removeAttr('disabled')" (mkBuild')
                                 (Build.Building _ _ ) ->void$ element mkBuild' # set (attr "disabled") "true"
-                                (Build.NoBuild) -> 
+                                (Build.NoBuild _) -> 
                                     runFunction  $ ffi "$(%1).removeAttr('disabled')" (mkBuild')
                                 (Build.NoJpgBuild) -> 
                                     runFunction  $ ffi "$(%1).removeAttr('disabled')" (mkBuild')
@@ -282,7 +282,7 @@ sinkModel env@Env{..} win translations bModel input
                             (Build.DoneBuild _ _) ->
                                 runFunction  $ ffi "$(%1).removeAttr('disabled')" (mkBuild')
                             (Build.Building _ _ ) ->void$ element mkBuild' # set (attr "disabled") "true"
-                            (Build.NoBuild) -> 
+                            (Build.NoBuild _) -> 
                                 runFunction  $ ffi "$(%1).removeAttr('disabled')" (mkBuild')
                             (Build.NoJpgBuild) -> 
                                 runFunction  $ ffi "$(%1).removeAttr('disabled')" (mkBuild')
