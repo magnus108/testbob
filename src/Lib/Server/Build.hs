@@ -63,7 +63,7 @@ import Data.Time.Clock
 
 
 shakeDir :: FilePath
-shakeDir = "._build"
+shakeDir = "/dev/null"
 
 getDate :: UTCTime -> String
 getDate = formatTime defaultTimeLocale "%Y - %m%d"
