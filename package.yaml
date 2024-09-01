@@ -35,7 +35,7 @@ dependencies:
 - aeson 
 - conduit 
 - conduit-extra
-- fsnotify 
+- fsnotify == 0.3.0.1
 - filepath
 - unordered-containers 
 - threepenny-gui 

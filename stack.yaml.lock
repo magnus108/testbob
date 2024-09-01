@@ -11,9 +11,16 @@ packages:
       size: 212
   original:
     hackage: strings-1.1@sha256:0285dec4c8ab262359342b3e5ef1eb567074669461b9b38404f1cb870c881c5c,1617
+- completed:
+    hackage: fsnotify-0.3.0.1@sha256:fbec8cddd3f991d5b905df16895c67717b0f580e1ef33de34d93de814af1a08a,2988
+    pantry-tree:
+      sha256: 37a2111006e61b752f3d4690dc81d76a4cedf3415dc486779addb2a033f5de58
+      size: 1130
+  original:
+    hackage: fsnotify-0.3.0.1@sha256:fbec8cddd3f991d5b905df16895c67717b0f580e1ef33de34d93de814af1a08a,2988
 snapshots:
 - completed:
-    sha256: 63539429076b7ebbab6daa7656cfb079393bf644971156dc349d7c0453694ac2
-    size: 586296
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/18/18.yaml
-  original: lts-18.18
+    sha256: 098936027eaa1ef14e2b8eb39d9933a973894bb70a68684a1bbf00730249879b
+    size: 720001
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/22/33.yaml
+  original: lts-22.33

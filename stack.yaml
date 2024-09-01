@@ -17,7 +17,7 @@
 #
 # resolver: ./custom-snapshot.yaml
 # resolver: https://example.com/snapshots/2018-01-01.yaml
-resolver: lts-18.18
+resolver: lts-22.33
 
 # User packages to be built.
 # Various formats can be used as shown in the example below.
@@ -41,6 +41,7 @@ packages:
 #
 extra-deps:
 - strings-1.1@sha256:0285dec4c8ab262359342b3e5ef1eb567074669461b9b38404f1cb870c881c5c,1617
+- fsnotify-0.3.0.1@sha256:fbec8cddd3f991d5b905df16895c67717b0f580e1ef33de34d93de814af1a08a,2988
 # - base-noprelude-4.13.0.0
 
 # Override default flag values for local packages and extra-deps
@@ -66,3 +67,5 @@ extra-deps:
 #
 # Allow a newer minor version of GHC than the snapshot specifies
 # compiler-check: newer-minor
+allow-newer: true
+allow-newer-deps: [strings]
