@@ -117,7 +117,7 @@ opts  c photographee = shakeOptions
 
 gradePath :: Main.Item -> FilePath
 gradePath item =
-    Doneshooting.unDoneshooting doneshooting </> location </> extension </> grade
+    Doneshooting.unDoneshooting doneshooting </> location </> "raw" </> grade
         where
             location = takeBaseName $ Location.unLocationFile $ Lens.view Main.location item
             session = Lens.view Main.session item
@@ -140,7 +140,7 @@ isKindergartenGroup _ = False
 
 mkDoneshootingPath :: Int -> FilePath -> Main.Item -> FilePath
 mkDoneshootingPath index' file item =
-    Doneshooting.unDoneshooting doneshooting </> location </> extension </> grade </> sessionId ++ "." ++ tea ++ "." ++ shootingId ++ "." ++ photographerId ++ "." ++ no ++ (toLower <$> (FP.takeExtension file))
+    Doneshooting.unDoneshooting doneshooting </> location </> "raw" </> grade </> sessionId ++ "." ++ tea ++ "." ++ shootingId ++ "." ++ photographerId ++ "." ++ no ++ (toLower <$> (FP.takeExtension file))
         where
             location = takeBaseName $ Location.unLocationFile $ Lens.view Main.location item
             session = Lens.view Main.session item
